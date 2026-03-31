@@ -51,22 +51,22 @@ void GetClassAverages(StudentT student[], GradebookT gradebook[], MathT math[], 
   double cTestAverage {0.0};
   double cHwkAverage {0.0};
   double sum {0.0};
-  for (int i = 0; i <= gradebook[0].numTests; i++) {
+  for (int i = 0; i < gradebook[0].numTests; i++) {
     for (int j = 0; j < numStudents; j++) {
       sum += student[j].testGrades[i];
     }
     cTestAverage = sum/numStudents;
     sum = 0.0;
-    math[i].cTestAverages[i] = cTestAverage;
+    math[i].cTestAverages = cTestAverage;
     cTestAverage = 0.0;
   }
-  for (int i = 0; i <= gradebook[0].numHomework; i++) {
+  for (int i = 0; i < gradebook[0].numHomework; i++) {
     for (int j = 0; j < numStudents; j++) {
       sum += student[j].hwkGrades[i];
     }
     cHwkAverage = sum/numStudents;
     sum = 0.0;
-    math[i].cHwkAverages[i] = cHwkAverage;
+    math[i].cHwkAverages = cHwkAverage;
     cHwkAverage = 0.0;
   }
 }
@@ -77,7 +77,7 @@ void GetClassSDs(StudentT student[], GradebookT gradebook[], MathT math[], int n
   double quotient {0.0};
   double sum {0.0};
 
-  for (int i = 0; i <= gradebook[0].numTests; i++) {
+  for (int i = 0; i < gradebook[0].numTests; i++) {
     for (int j = 0; j < numStudents; j++) {
       sum += pow ((student[j].testGrades[i] - math[i].cTestAverages[i]), 2);
       if (j < numStudents and i < gradebook[0].numTests) {
@@ -92,7 +92,7 @@ void GetClassSDs(StudentT student[], GradebookT gradebook[], MathT math[], int n
     math[i].cTestSDs[i] = cTestSD;
     cTestSD = 0.0;
   }
-  for (int i = 0; i <= gradebook[0].numHomework; i++) {
+  for (int i = 0; i < gradebook[0].numHomework; i++) {
     for (int j = 0; j < numStudents; j++) {
       if (j < numStudents) {
         sum = 0.0;
@@ -119,7 +119,7 @@ void GetStudentTestAverages(StudentT student[], GradebookT gradebook[], MathT ma
     }
     tAverage = sum/gradebook[0].numTests;
     sum = 0.0;
-    math[i].sTestAverages[gradebook[0].numTests] = tAverage;
+    math[i].sTestAverages[i] = tAverage;
   }
 }
 
@@ -134,7 +134,7 @@ void GetStudentHomeworkAverages(StudentT student[], GradebookT gradebook[], Math
     }
     hAverage = sum/gradebook[0].numHomework;
     sum = 0.0;
-    math[i].sHwkAverages[gradebook[0].numHomework] = hAverage;
+    math[i].sHwkAverages[i] = hAverage;
   }
 }
 
