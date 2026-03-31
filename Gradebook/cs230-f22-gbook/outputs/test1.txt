@@ -1,0 +1,59 @@
+Name of file with grade data: Menu: (Enter 1-4)
+
+1: Show class statistics
+2: List students
+3: List passing students
+4: Exit
+Please enter your selection: 
+Statistics for Class Math 105:
+Test      Average    SD
+1            89.2  15.3
+2            68.5   2.1
+3            86.9   3.0
+
+Homework  Average    SD
+1            85.0   7.1
+2            80.0   0.0
+3            87.5   3.5
+4            88.5   2.1
+5            84.7   0.5
+6            87.0   2.8
+7            94.0   1.4
+
+Menu: (Enter 1-4)
+
+1: Show class statistics
+2: List students
+3: List passing students
+4: Exit
+Please enter your selection: 
+Student: Bob F. Gunderson, Esq.	Level: 4
+Test Average: 86.3	Homework Average: 86.4
+Course Grade: 86.4
+
+Student: Fred G. Saturn	Level: 2
+Test Average: 76.7	Homework Average: 86.9
+Course Grade: 82.8
+
+Menu: (Enter 1-4)
+
+1: Show class statistics
+2: List students
+3: List passing students
+4: Exit
+Please enter your selection: 
+Student: Bob F. Gunderson, Esq.	Level: 4
+Test Average: 86.3	Homework Average: 86.4
+Course Grade: 86.4
+
+Student: Fred G. Saturn	Level: 2
+Test Average: 76.7	Homework Average: 86.9
+Course Grade: 82.8
+
+Menu: (Enter 1-4)
+
+1: Show class statistics
+2: List students
+3: List passing students
+4: Exit
+Please enter your selection:
